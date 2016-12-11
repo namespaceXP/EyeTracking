@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.xp.facialprocessingsample.MainActivity">
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:visibility="invisible"
+        android:layout_height="match_parent"
+        >
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="播放视频"
+        android:id="@+id/playButton"
+        android:layout_gravity="left|top"
+        android:layout_x="120dp"
+        android:visibility="invisible"
+        android:layout_y="80dp" />
+
+    <VideoView
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        android:visibility="invisible"
+        android:id="@+id/videoView"
+        android:layout_gravity="center_horizontal|top" />
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="445dp"
+        android:visibility="visible"
+
+        android:scrollbarStyle="outsideOverlay" android:background="@android:drawable/edit_text">
+        <TextView
+            android:layout_width="fill_parent"
+            android:id="@+id/textView"
+            android:textSize="18dp"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:text = "他们还是照例不说话，默默地站在我的床前。而我，照例还是僵在床上动弹不得，眼睁睁看着那些烧焦的、无头的躯体围在我的周围。而他，依然在我的耳边轻轻说出：其实，你跟我是一样的。
+            \n我已经习惯了和他们在夜里相遇，可是，仍然大汗淋漓。\n直到他们一言不发的离去，我才重新听见杜宇在对面那张床上平静的呼吸。\n窗外清冷的月光静静地泼洒进来，宿舍里的火焰早就消失不见了，有点冷。\n我费力地翻了个身，手摸到枕头下那把军刀，感觉到粗糙、略有起伏的刀柄，呼吸慢慢平静。
+            \n我又重新沉沉睡去。
+            \n偶尔我也会回到师大看看。我会坐在男生二宿舍门前的花坛上，那里曾经有一株很老的槐树，现在是各种五颜六色，叫不出名字的鲜花，在微风中轻薄无知的搔首弄姿。我常常凝望着眼前这栋七层高的现代化学生公寓，竭力回想它曾经的样子。颜色褪尽的红砖，摇摇欲坠的木质窗户，油漆斑驳的铁皮大门。以及那些曾经在这栋楼里进出的年轻面孔。
+            \n突然间，我会感到深深的伤感，就好像被一种脆弱的情绪猛然击中。而记忆的闸门，也会在不经意间悄悄打开，绵绵不绝，一发不可收拾。
+            \n如果你认识我，你会感到我是个沉默寡言的人。大多数时候，我都尽可能独处。一个人吃饭，一个人走路，连听课，都避免跟其他人坐在一起。
+            \n不要靠近我。我常常用眼神阻止那些试图了解我的人。所有人都对我敬而远之，而我，却熟悉身边所有人的脾气、秉性、生活习惯。如果你在教室里、食堂里、校园的路上，看到一个面色苍白，看似漫不经心，却在不住的打量别人的人，那个人，就是我。
+            \n我住在J大南苑五舍B座313房间。我的室友叫杜宇，法理学专业的硕士研究生。大概是因为同住一室的原因，在法学院里，他是为数不多的经常跟我说话的人。他是个心地善良的人，看得出他处心积虑的想和我搞好关系，也让我在法学院里显得不那么孤独——尽管我并不在乎这一点——不过，我并不拒绝和他偶尔聊聊天，包括他那个娇气得有点夸张的女朋友。
+            \n“喏，一起吃吧。”
+            \n我正端着饭盆，一边吃着里面拌着辣酱的刀削面，一边聚精会神的看着电脑上的一张图片和下面的文字说明，没有留意杜宇和他女朋友是什么时候走进宿舍的。
+            \n那是一串刚刚烤好的羊肉串，上面洒着辣椒面和孜然粉，黄色的油流淌下来，散发出一股焦糊的味道。
+            \n我想当时我的脸一定比身后的墙还要白，我直愣愣地看着伸到我面前的这串烤羊肉，喉咙里咕噜噜的响了几声后，就把刚刚吃了一半的午饭，吐回了手中的饭盆里。
+            \n我捂着嘴，端着盛满还在冒着热气的呕吐物的饭盆夺门而出，身后是张瑶诧异的声音：“他怎么了？”
+            \n我无力的斜靠在卫生间的水池边，草草的用水撸了把脸。抬起头，墙上污渍斑驳的镜子里映出一张被水和冷汗浸湿的、苍白的脸，眼神呆滞，嘴角还残留着一点没有洗去的呕吐物。
+            \n我弯下身子又干呕了几声，感到胃里空荡荡的，实在没有什么可吐的了，就颤抖着勉强站起来，凑近水龙头喝了几口凉水，在口腔里转了转，吐了出去。
+            \n把饭盆扔进垃圾桶，我摇摇晃晃的走回了寝室。
+"
+            />
+    </ScrollView>
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="切"
+        android:id="@+id/switchView"
+        android:layout_gravity="right|bottom"
+        android:layout_x="320dp"
+        android:layout_y="440dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="110dp"
+        android:id="@+id/ad"
+        android:src="@drawable/game2"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_y="380dp"
+        android:visibility="invisible"
+        android:layout_x="0dp" />
+
+    <FrameLayout
+        android:visibility="invisible"
+        android:id="@+id/camera_preview"
+        android:layout_height="374dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center_horizontal|top"
+        android:layout_x="180dp"
+        android:layout_y="-153dp">
+
+    </FrameLayout>
+
+    </AbsoluteLayout>
+    <AbsoluteLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:id="@+id/imageView"
+            android:src="@drawable/x"
+            android:layout_x="0dp"
+            android:layout_y="12dp" />
+
+        <TextView
+        android:id="@+id/info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gaze_x:"
+        android:layout_gravity="left|bottom"
+        android:textColor="#f10f0f"
+        android:layout_y="460dp" />
+    </AbsoluteLayout>
+</AbsoluteLayout>
