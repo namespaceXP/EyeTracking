@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
     int mode = 0;
     int myad = -1;
     int admode = 1;
-    int adtime = 300;
+    int adtime = 30;
     int nowx = 0, nowy = 0;
 
     private int numFaces;
@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
             switch (msg.what) {
                 default:
                     adView.setVisibility(View.VISIBLE);
+                    Log.i("666", "xxx");
                     break;
             }
             super.handleMessage(msg);
@@ -179,7 +180,9 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
     final android.os.Handler handler8 = new android.os.Handler(){
         public void handleMessage(Message msg) {
             ImageView picView = (ImageView)findViewById(R.id.imageView);
-            nowx +=10;
+            nowx +=30;
+            if(nowx > 800)
+                nowx=0;
             picView.setX(nowx);
             picView.setY(nowy);
             super.handleMessage(msg);
@@ -285,7 +288,7 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
                 if(myTime % 10 ==0){
                     Message message8 = new Message();
                     message8.what = 0;
-                    handler5.sendMessage(message8);
+                    handler8.sendMessage(message8);
                 }
 
                 if (faceArray == null)
