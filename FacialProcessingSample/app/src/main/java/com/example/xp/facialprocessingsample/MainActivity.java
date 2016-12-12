@@ -17,6 +17,8 @@ import android.content.*;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
+
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.*;
 import java.io.*;
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
     int myad = -1;
     int admode = 1;
     int adtime = 300;
+    int nowx = 0, nowy = 0;
 
     private int numFaces;
     FaceData[] faceArray = null;
@@ -173,6 +176,16 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
         }
     };
 
+    final android.os.Handler handler8 = new android.os.Handler(){
+        public void handleMessage(Message msg) {
+            ImageView picView = (ImageView)findViewById(R.id.imageView);
+            nowx +=10;
+            picView.setX(nowx);
+            picView.setY(nowy);
+            super.handleMessage(msg);
+        }
+    };
+
     private void startCamera(){
         _qcSDKEnabled = FacialProcessing.isFeatureSupported(FacialProcessing.FEATURE_LIST.FEATURE_FACIAL_PROCESSING);
 
@@ -269,28 +282,10 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
                     handler5.sendMessage(message5);
                 }
 
-                if(myTime % 100 < 25){
-                    Message msg = new Message();
-                    msg.what = 1;
-                    handler7.sendMessage(msg);
-                }
-                else if(myTime % 100 < 50){
-                    Message msg = new Message();
-                    msg.what = 2;
-                    handler7.sendMessage(msg);
-
-                }
-                else if(myTime % 100 < 75){
-                    Message msg = new Message();
-                    msg.what = 3;
-                    handler7.sendMessage(msg);
-
-                }
-                else{
-                    Message msg = new Message();
-                    msg.what = 4;
-                    handler7.sendMessage(msg);
-
+                if(myTime % 10 ==0){
+                    Message message8 = new Message();
+                    message8.what = 0;
+                    handler5.sendMessage(message8);
                 }
 
                 if (faceArray == null)
@@ -300,7 +295,6 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
                 if (inFrame) {
                     for (int i = 0; i < faceArray.length; i++) {
                         if (faceArray[i] != null && faceArray[i].getEyeGazePoint() != null) {
-                            /*
                             Message message1 = new Message();
                             message1.what = i;
                             Message message2 = new Message();
@@ -313,7 +307,7 @@ public class MainActivity extends AppCompatActivity implements Camera.PreviewCal
                             handler2.sendMessage(message2);
                             handler3.sendMessage(message3);
                             handler4.sendMessage(message4);
-                            */
+
 
                             myFileAccess.FileWriteLog(String.valueOf(faceArray[i].getEyeGazePoint().x) + "|" + String.valueOf(faceArray[i].getEyeGazePoint().y) + "|" + String.valueOf(faceArray[i].getEyeHorizontalGazeAngle()) + "|" + String.valueOf(faceArray[i].getEyeVerticalGazeAngle())
                                     + "|" + String.valueOf(myTime));
